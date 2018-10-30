@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'assets/scss/colors';
+@import 'assets/scss/sizes';
+
+/* DISPLAY */
+.bn-mobile-only{
+    @media #{$break-mobile-end}{
+        display: none !important;
+    }
+}
+.bn-tablet-only{
+    @media #{$break-tablet-end}{
+        display: none !important;
+    }
+}

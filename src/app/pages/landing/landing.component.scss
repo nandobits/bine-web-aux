@@ -1,0 +1,66 @@
+@import './src/assets/scss/sizes';
+@import './src/assets/scss/colors';
+
+.navbar{
+    .container-fluid{
+        padding: 0 48px;
+        @media #{$break-tablet}{
+            justify-content: center;
+        }
+        .navbar-wrapper{
+            .navbar-brand{
+                margin: 0px;
+                img{
+                    width: 100px;
+                }
+            }
+        }
+    }
+    .navbar-nav{
+        .nav-item{
+            .nav-link{
+                background-color: rgba(255, 255, 255, 0.1);
+                padding: 15px;
+            }
+        }
+    }
+}
+.page-header{
+    .content-center{
+        max-width: 100%;
+        .col-md-8{
+            max-width: 100%;
+            @media #{$break-mobile}{
+                padding: 0px;
+            }
+            .title{
+                font-weight: bold;
+                @media #{$break-mobile}{
+                    font-size: 34px;
+                }
+            }
+            .description{
+                font-size: 20px;
+                color: white;
+                @media #{$break-mobile}{
+                    font-size: 16px;
+                }
+            }
+            .btn{
+                background-color: $color-bine;
+                border: 0px;
+                box-shadow: none;
+                padding: 11px 24px;
+                margin: 0;
+                margin-top: 24px;
+            }
+        }
+    }
+}
+.footer{
+    .copyright{
+        a{
+            font-weight: bold;
+        }
+    }
+}
