@@ -1,0 +1,30 @@
+@import 'src/assets/scss/sizes';
+
+.container{
+    @media #{$break-tablet}{
+        padding-top: 50px !important;
+    }
+    .col-lg-4{
+        padding: 0px;
+        min-width: 370px;
+        @media #{$break-mobile}{
+            min-width: 100%;
+        }
+        .card{
+            .card-body{
+                .bn-image{
+                    padding-left: 20px;
+                    text-align: center;
+                    margin: 24px 0px;
+                    img{
+                        width: 100px
+                    }
+                }
+            }
+            .card-footer{
+                margin-top: 24px;
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
