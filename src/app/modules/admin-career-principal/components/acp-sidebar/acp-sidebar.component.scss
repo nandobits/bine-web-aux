@@ -1,0 +1,19 @@
+@import 'src/assets/scss/colors';
+
+.sidebar{
+    background-color: white;
+    .logo{
+        .logo-mini{
+            width: 42px;
+            margin: 0px 12px 0px 20px;
+            img{
+                width: 42px;
+            }
+        }
+        .logo-normal{
+            color: $color-bine;
+            font-size: 16.5px;
+            padding: 8px 0px 0px;
+        }
+    }
+}

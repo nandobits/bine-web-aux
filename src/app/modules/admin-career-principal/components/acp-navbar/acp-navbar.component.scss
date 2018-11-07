@@ -1,0 +1,27 @@
+@import 'src/assets/scss/colors';
+
+:host{
+    position: fixed;
+    width: inherit;
+}
+.navbar{
+    background-color: $color-bine !important;
+    height: 58px !important;
+    .bn-user-info{
+        display: flex;
+        align-items: center;
+        .bn-user-image{
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+        }
+        .bn-user-name{
+            display: block !important;
+            color: white;
+            margin: 0 8px;
+        }
+        .material-icons{
+            color: white;
+        }
+    }
+}

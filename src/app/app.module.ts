@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 /* My modules */
 import { AppRoutingModule } from './app-routing.module';
+import { AdminCareerPrincipalModule } from './modules/admin-career-principal/admin-career-principal.module';
 
 /* Components */
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { LoginComponent } from './pages/login/login.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AdminCareerPrincipalModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
