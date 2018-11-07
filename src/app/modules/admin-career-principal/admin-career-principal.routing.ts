@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 import { PagesComponent } from './pages/pages.component';
 import { AcpDashboardComponent } from './pages/acp-dashboard/acp-dashboard.component';
 import { AcpStudentsComponent } from './pages/acp-students/acp-students.component';
+import { AcpTeachersComponent } from './pages/acp-teachers/acp-teachers.component';
 
 export const appRoutes: Routes = [
     {
@@ -12,6 +13,7 @@ export const appRoutes: Routes = [
             { path: '', redirectTo: 'panel-de-control', pathMatch: 'full' },
             { path: 'panel-de-control', component: AcpDashboardComponent },
             { path: 'estudiantes', component: AcpStudentsComponent },
+            { path: 'docentes', component: AcpTeachersComponent },
         ]
     }
 ]

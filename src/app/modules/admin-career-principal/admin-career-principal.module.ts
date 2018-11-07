@@ -14,6 +14,7 @@ import { AcpNavbarComponent } from './components/acp-navbar/acp-navbar.component
 import { PagesComponent } from './pages/pages.component';
 import { AcpDashboardComponent } from './pages/acp-dashboard/acp-dashboard.component';
 import { AcpStudentsComponent } from './pages/acp-students/acp-students.component';
+import { AcpTeachersComponent } from './pages/acp-teachers/acp-teachers.component';
 
 @NgModule({
   imports: [
@@ -27,6 +28,7 @@ import { AcpStudentsComponent } from './pages/acp-students/acp-students.componen
     AcpSidebarComponent,
     AcpNavbarComponent,
     AcpStudentsComponent,
+    AcpTeachersComponent,
   ]
 })
 export class AdminCareerPrincipalModule { }
