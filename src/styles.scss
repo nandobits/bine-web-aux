@@ -1,6 +1,10 @@
 @import 'assets/scss/colors';
 @import 'assets/scss/sizes';
 
+p{
+    margin: 0;
+}
+
 /* DISPLAY */
 .bn-mobile-only{
     @media #{$break-mobile-end}{

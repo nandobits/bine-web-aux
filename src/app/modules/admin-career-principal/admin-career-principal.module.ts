@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { ChartsModule } from 'ng2-charts';
 
 /* Routing */
 import { appRoutes } from './admin-career-principal.routing';
@@ -17,6 +18,7 @@ import { AcpDashboardComponent } from './pages/acp-dashboard/acp-dashboard.compo
   imports: [
     CommonModule,
     RouterModule.forRoot(appRoutes),
+    ChartsModule
   ],
   declarations: [
     PagesComponent,

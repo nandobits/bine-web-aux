@@ -1,3 +1,408 @@
 <div class="container-fluid">
-    <p>Dashboard admin</p>
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header card-header-info card-header-icon">
+                    <div class="card-icon">
+                        <i class="material-icons">account_circle</i>
+                    </div>
+                    <p class="card-category">Admins</p>
+                    <h3 class="card-title">11</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">local_offer</i> Registrados actualmente
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header card-header-danger card-header-icon">
+                    <div class="card-icon">
+                        <i class="material-icons">supervisor_account</i>
+                    </div>
+                    <p class="card-category">Docentes</p>
+                    <h3 class="card-title">57</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">local_offer</i> Registrados actualmente
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header card-header-success card-header-icon">
+                    <div class="card-icon">
+                        <i class="material-icons">local_library</i>
+                    </div>
+                    <p class="card-category">Estudiantes</p>
+                    <h3 class="card-title">319</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">local_offer</i> Registrados actualmente
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header card-header-warning card-header-icon">
+                    <div class="card-icon">
+                        <i class="material-icons">assignment_ind</i>
+                    </div>
+                    <p class="card-category">Personal</p>
+                    <h3 class="card-title">25</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">local_offer</i> Registrados actualmente
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3>Estadísticas</h3>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-content">
+                    <canvas baseChart
+                          [data]="doughnutChartDataAdmin"
+                          [labels]="doughnutChartLabelsAdmin"
+                          [colors]="doughnutChartColors"
+                          [chartType]="doughnutChartType"></canvas>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">account_circle</i> Administradores
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-content">
+                    <canvas baseChart
+                          [data]="doughnutChartDataTeacher"
+                          [labels]="doughnutChartLabelsTeacher"
+                          [colors]="doughnutChartColors"
+                          [chartType]="doughnutChartType"></canvas>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">supervisor_account</i> Docentes
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-content">
+                    <canvas baseChart
+                          [data]="doughnutChartDataStudent"
+                          [labels]="doughnutChartLabelsStudent"
+                          [colors]="doughnutChartColorsStudent"
+                          [chartType]="doughnutChartType"></canvas>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">local_library</i> Estudiantes
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-content">
+                    <canvas baseChart
+                          [data]="doughnutChartDataPersonal"
+                          [labels]="doughnutChartLabelsPersonal"
+                          [colors]="doughnutChartColors"
+                          [chartType]="doughnutChartType"></canvas>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">assignment_ind</i> Personal
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3>Administradores Principales</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card bn-card-user">
+                <div class="card-header card-header-info">
+                    <img src="assets/img/avatar-gray.png" class="bn-user-image" alt="">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Fernando Pérez</h4>
+                    <p class="card-category">Administrador Principal</p>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">email</i> admin01@bine.mx
+                    </div>
+                    <div class="stats">
+                        <i class="material-icons">phone</i> 2225267773
+                    </div>
+                    <div class="stats">
+                        <i class="material-icons">person</i> Activo
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bn-card-user">
+                <div class="card-header card-header-info">
+                    <img src="assets/img/avatar-gray.png" class="bn-user-image" alt="">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Fernando Pérez</h4>
+                    <p class="card-category">Administrador Principal</p>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">email</i> admin01@bine.mx
+                    </div>
+                    <div class="stats">
+                        <i class="material-icons">phone</i> 2225267773
+                    </div>
+                    <div class="stats">
+                        <i class="material-icons">person</i> Activo
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bn-card-user">
+                <div class="card-header card-header-info">
+                    <img src="assets/img/avatar-gray.png" class="bn-user-image" alt="">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Fernando Pérez</h4>
+                    <p class="card-category">Administrador Principal</p>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">email</i> admin01@bine.mx
+                    </div>
+                    <div class="stats">
+                        <i class="material-icons">phone</i> 2225267773
+                    </div>
+                    <div class="stats">
+                        <i class="material-icons">person</i> Activo
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3>Administradores</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card bn-card-user">
+                <div class="card-header card-header-success">
+                    <img src="assets/img/avatar-gray.png" class="bn-user-image" alt="">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Fernando Pérez</h4>
+                    <p class="card-category">Administrador</p>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">email</i> admin01@bine.mx
+                    </div>
+                    <div class="stats">
+                        <i class="material-icons">phone</i> 2225267773
+                    </div>
+                    <div class="stats">
+                        <i class="material-icons">person</i> Activo
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bn-card-user">
+                <div class="card-header card-header-success">
+                    <img src="assets/img/avatar-gray.png" class="bn-user-image" alt="">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Fernando Pérez</h4>
+                    <p class="card-category">Administrador</p>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">email</i> admin01@bine.mx
+                    </div>
+                    <div class="stats">
+                        <i class="material-icons">phone</i> 2225267773
+                    </div>
+                    <div class="stats">
+                        <i class="material-icons">person</i> Activo
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bn-card-user">
+                <div class="card-header card-header-success">
+                    <img src="assets/img/avatar-gray.png" class="bn-user-image" alt="">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Fernando Pérez</h4>
+                    <p class="card-category">Administrador</p>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">email</i> admin01@bine.mx
+                    </div>
+                    <div class="stats">
+                        <i class="material-icons">phone</i> 2225267773
+                    </div>
+                    <div class="stats">
+                        <i class="material-icons">person</i> Activo
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bn-card-user">
+                <div class="card-header card-header-success">
+                    <img src="assets/img/avatar-gray.png" class="bn-user-image" alt="">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Fernando Pérez</h4>
+                    <p class="card-category">Administrador</p>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">email</i> admin01@bine.mx
+                    </div>
+                    <div class="stats">
+                        <i class="material-icons">phone</i> 2225267773
+                    </div>
+                    <div class="stats">
+                        <i class="material-icons">person</i> Activo
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bn-card-user">
+                <div class="card-header card-header-success">
+                    <img src="assets/img/avatar-gray.png" class="bn-user-image" alt="">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Fernando Pérez</h4>
+                    <p class="card-category">Administrador</p>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">email</i> admin01@bine.mx
+                    </div>
+                    <div class="stats">
+                        <i class="material-icons">phone</i> 2225267773
+                    </div>
+                    <div class="stats">
+                        <i class="material-icons">person</i> Activo
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bn-card-user">
+                <div class="card-header card-header-success">
+                    <img src="assets/img/avatar-gray.png" class="bn-user-image" alt="">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Fernando Pérez</h4>
+                    <p class="card-category">Administrador</p>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">email</i> admin01@bine.mx
+                    </div>
+                    <div class="stats">
+                        <i class="material-icons">phone</i> 2225267773
+                    </div>
+                    <div class="stats">
+                        <i class="material-icons">person</i> Activo
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3>Administradores de solo lectura</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card bn-card-user">
+                <div class="card-header card-header-warning">
+                    <img src="assets/img/avatar-gray.png" class="bn-user-image" alt="">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Fernando Pérez</h4>
+                    <p class="card-category">Administrador</p>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">email</i> admin01@bine.mx
+                    </div>
+                    <div class="stats">
+                        <i class="material-icons">phone</i> 2225267773
+                    </div>
+                    <div class="stats">
+                        <i class="material-icons">person</i> Activo
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bn-card-user">
+                <div class="card-header card-header-warning">
+                    <img src="assets/img/avatar-gray.png" class="bn-user-image" alt="">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Fernando Pérez</h4>
+                    <p class="card-category">Administrador</p>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">email</i> admin01@bine.mx
+                    </div>
+                    <div class="stats">
+                        <i class="material-icons">phone</i> 2225267773
+                    </div>
+                    <div class="stats">
+                        <i class="material-icons">person</i> Activo
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bn-card-user">
+                <div class="card-header card-header-warning">
+                    <img src="assets/img/avatar-gray.png" class="bn-user-image" alt="">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Fernando Pérez</h4>
+                    <p class="card-category">Administrador</p>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">email</i> admin01@bine.mx
+                    </div>
+                    <div class="stats">
+                        <i class="material-icons">phone</i> 2225267773
+                    </div>
+                    <div class="stats">
+                        <i class="material-icons">person</i> Activo
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
