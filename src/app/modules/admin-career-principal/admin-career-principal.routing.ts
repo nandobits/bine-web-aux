@@ -4,6 +4,7 @@ import { PagesComponent } from './pages/pages.component';
 import { AcpDashboardComponent } from './pages/acp-dashboard/acp-dashboard.component';
 import { AcpStudentsComponent } from './pages/acp-students/acp-students.component';
 import { AcpTeachersComponent } from './pages/acp-teachers/acp-teachers.component';
+import { AcpCurricularMapComponent } from './pages/acp-curricular-map/acp-curricular-map.component';
 
 export const appRoutes: Routes = [
     {
@@ -14,6 +15,7 @@ export const appRoutes: Routes = [
             { path: 'panel-de-control', component: AcpDashboardComponent },
             { path: 'estudiantes', component: AcpStudentsComponent },
             { path: 'docentes', component: AcpTeachersComponent },
+            { path: 'mapa-curricular', component: AcpCurricularMapComponent },
         ]
     }
 ]

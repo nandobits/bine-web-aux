@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+declare function initScrollBar(): any;
+declare function initApp(): any;
 
 @Component({
   selector: 'bn-pages',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagesComponent implements OnInit {
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+        initScrollBar();
+        initApp();
+    }
 
 }

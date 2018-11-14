@@ -9351,8 +9351,8 @@ fieldset[disabled] .form-group .form-control {
   margin: 0 15px; }
   .off-canvas-sidebar .navbar .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
     background: rgba(200, 200, 200, 0.2); }
-.off-canvas-sidebar .navbar.navbar-transparent {
-  padding-top: 25px !important; }
+/*.off-canvas-sidebar .navbar.navbar-transparent {
+  padding-top: 25px !important; }*/
 
 .pagination > .page-item > .page-link,
 .pagination > .page-item > span {

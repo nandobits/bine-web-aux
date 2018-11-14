@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare function initTable(): any;
 
 @Component({
   selector: 'bn-acp-teachers',
@@ -10,6 +11,7 @@ export class AcpTeachersComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+      initTable();
   }
 
 }
