@@ -150,7 +150,7 @@ export class AcpCurricularMapComponent implements OnInit {
         swal({
           title: 'Datos de la materia',
           html: `
-          <div class="bn-form-row">
+          <div class="bn-form-row bn-flex">
             <div class="col-md-2">
               <div class="form-group">
                 <label for="bn-num" class="bmd-label-floating">Numero</label>

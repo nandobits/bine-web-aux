@@ -1,0 +1,346 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+            <ul class="nav nav-pills nav-pills-warning" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#link1" role="tablist">
+                  1º Semestre
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#link2" role="tablist">
+                  2º Semestre
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#link3" role="tablist">
+                  3º Semestre
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#link4" role="tablist">
+                  4º Semestre
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#link5" role="tablist">
+                  5º Semestre
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#link6" role="tablist">
+                  6º Semestre
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#link7" role="tablist">
+                  7º Semestre
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#link8" role="tablist">
+                  8º Semestre
+                </a>
+              </li>
+            </ul>
+            <div class="tab-content tab-space">
+              <div class="tab-pane active" id="link1">
+                  <div class="card">
+                      <div class="card-header card-header-info card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">today</i>
+                        </div>
+                        <h4 class="card-title">1º Semestre Grupo A</h4>
+                      </div>
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                            <th></th>
+                                            <th style="width:20%">Lunes</th>
+                                            <th style="width:20%">Martes</th>
+                                            <th style="width:20%">Miercoles</th>
+                                            <th style="width:20%">Jueves</th>
+                                            <th style="width:20%">Viernes</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr *ngFor="let schedule of scheduleA; let indexSchedule = index">
+                                            <td class="text-center">{{schedule.hour}}</td>
+                                            <td *ngFor="let day of schedule.days; let indexDay = index" class="bn-day" (click)="onAddSchedule(day, indexSchedule, indexDay)">
+                                                <p>{{day.subject}}</p>
+                                                <p class="bn-text-500">{{day.teacher}}</p>
+                                            </td>
+                                        </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="tab-pane" id="link2">
+                  <div class="card">
+                      <div class="card-header card-header-info card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">today</i>
+                        </div>
+                        <h4 class="card-title">2º Semestre Grupo A</h4>
+                      </div>
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                            <th></th>
+                                            <th style="width:20%">Lunes</th>
+                                            <th style="width:20%">Martes</th>
+                                            <th style="width:20%">Miercoles</th>
+                                            <th style="width:20%">Jueves</th>
+                                            <th style="width:20%">Viernes</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr *ngFor="let schedule of scheduleA; let indexSchedule = index">
+                                            <td class="text-center">{{schedule.hour}}</td>
+                                            <td *ngFor="let day of schedule.days; let indexDay = index" class="bn-day" (click)="onAddSchedule(day, indexSchedule, indexDay)">
+                                                <p>{{day.subject}}</p>
+                                                <p class="bn-text-500">{{day.teacher}}</p>
+                                            </td>
+                                        </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="tab-pane" id="link3">
+                  <div class="card">
+                      <div class="card-header card-header-info card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">today</i>
+                        </div>
+                        <h4 class="card-title">3º Semestre Grupo A</h4>
+                      </div>
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                            <th></th>
+                                            <th style="width:20%">Lunes</th>
+                                            <th style="width:20%">Martes</th>
+                                            <th style="width:20%">Miercoles</th>
+                                            <th style="width:20%">Jueves</th>
+                                            <th style="width:20%">Viernes</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr *ngFor="let schedule of scheduleA; let indexSchedule = index">
+                                            <td class="text-center">{{schedule.hour}}</td>
+                                            <td *ngFor="let day of schedule.days; let indexDay = index" class="bn-day" (click)="onAddSchedule(day, indexSchedule, indexDay)">
+                                                <p>{{day.subject}}</p>
+                                                <p class="bn-text-500">{{day.teacher}}</p>
+                                            </td>
+                                        </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="tab-pane" id="link4">
+                  <div class="card">
+                      <div class="card-header card-header-info card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">today</i>
+                        </div>
+                        <h4 class="card-title">4º Semestre Grupo A</h4>
+                      </div>
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                            <th></th>
+                                            <th style="width:20%">Lunes</th>
+                                            <th style="width:20%">Martes</th>
+                                            <th style="width:20%">Miercoles</th>
+                                            <th style="width:20%">Jueves</th>
+                                            <th style="width:20%">Viernes</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr *ngFor="let schedule of scheduleA; let indexSchedule = index">
+                                            <td class="text-center">{{schedule.hour}}</td>
+                                            <td *ngFor="let day of schedule.days; let indexDay = index" class="bn-day" (click)="onAddSchedule(day, indexSchedule, indexDay)">
+                                                <p>{{day.subject}}</p>
+                                                <p class="bn-text-500">{{day.teacher}}</p>
+                                            </td>
+                                        </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="tab-pane" id="link5">
+                  <div class="card">
+                      <div class="card-header card-header-info card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">today</i>
+                        </div>
+                        <h4 class="card-title">5º Semestre Grupo A</h4>
+                      </div>
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                            <th></th>
+                                            <th style="width:20%">Lunes</th>
+                                            <th style="width:20%">Martes</th>
+                                            <th style="width:20%">Miercoles</th>
+                                            <th style="width:20%">Jueves</th>
+                                            <th style="width:20%">Viernes</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr *ngFor="let schedule of scheduleA; let indexSchedule = index">
+                                            <td class="text-center">{{schedule.hour}}</td>
+                                            <td *ngFor="let day of schedule.days; let indexDay = index" class="bn-day" (click)="onAddSchedule(day, indexSchedule, indexDay)">
+                                                <p>{{day.subject}}</p>
+                                                <p class="bn-text-500">{{day.teacher}}</p>
+                                            </td>
+                                        </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="tab-pane" id="link6">
+                  <div class="card">
+                      <div class="card-header card-header-info card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">today</i>
+                        </div>
+                        <h4 class="card-title">6º Semestre Grupo A</h4>
+                      </div>
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                            <th></th>
+                                            <th style="width:20%">Lunes</th>
+                                            <th style="width:20%">Martes</th>
+                                            <th style="width:20%">Miercoles</th>
+                                            <th style="width:20%">Jueves</th>
+                                            <th style="width:20%">Viernes</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr *ngFor="let schedule of scheduleA; let indexSchedule = index">
+                                            <td class="text-center">{{schedule.hour}}</td>
+                                            <td *ngFor="let day of schedule.days; let indexDay = index" class="bn-day" (click)="onAddSchedule(day, indexSchedule, indexDay)">
+                                                <p>{{day.subject}}</p>
+                                                <p class="bn-text-500">{{day.teacher}}</p>
+                                            </td>
+                                        </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="tab-pane" id="link7">
+                  <div class="card">
+                      <div class="card-header card-header-info card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">today</i>
+                        </div>
+                        <h4 class="card-title">7º Semestre Grupo A</h4>
+                      </div>
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                            <th></th>
+                                            <th style="width:20%">Lunes</th>
+                                            <th style="width:20%">Martes</th>
+                                            <th style="width:20%">Miercoles</th>
+                                            <th style="width:20%">Jueves</th>
+                                            <th style="width:20%">Viernes</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr *ngFor="let schedule of scheduleA; let indexSchedule = index">
+                                            <td class="text-center">{{schedule.hour}}</td>
+                                            <td *ngFor="let day of schedule.days; let indexDay = index" class="bn-day" (click)="onAddSchedule(day, indexSchedule, indexDay)">
+                                                <p>{{day.subject}}</p>
+                                                <p class="bn-text-500">{{day.teacher}}</p>
+                                            </td>
+                                        </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="tab-pane" id="link8">
+                  <div class="card">
+                      <div class="card-header card-header-info card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">today</i>
+                        </div>
+                        <h4 class="card-title">8º Semestre Grupo A</h4>
+                      </div>
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                            <th></th>
+                                            <th style="width:20%">Lunes</th>
+                                            <th style="width:20%">Martes</th>
+                                            <th style="width:20%">Miercoles</th>
+                                            <th style="width:20%">Jueves</th>
+                                            <th style="width:20%">Viernes</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr *ngFor="let schedule of scheduleA; let indexSchedule = index">
+                                            <td class="text-center">{{schedule.hour}}</td>
+                                            <td *ngFor="let day of schedule.days; let indexDay = index" class="bn-day" (click)="onAddSchedule(day, indexSchedule, indexDay)">
+                                                <p>{{day.subject}}</p>
+                                                <p class="bn-text-500">{{day.teacher}}</p>
+                                            </td>
+                                        </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

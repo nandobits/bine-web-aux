@@ -141,25 +141,669 @@
 
               </div>
               <div class="tab-pane" id="link2">
-                Semestre 2
+                  <div class="card">
+                      <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">web</i>
+                        </div>
+                        <div class="bn-card-title-action">
+                            <h4 class="card-title">Materias Curriculares</h4>
+                            <button class="btn btn-info" (click)="onAddSubject()">AGREGAR MATERIA</button>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                            <th class="text-center">Num</th>
+                                            <th>Nombre</th>
+                                            <th class="text-center">Clave</th>
+                                            <th class="text-center">Horas</th>
+                                            <th class="text-center">Periodos</th>
+                                            <th class="text-center">Acciones</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr *ngFor="let subject of subjects; let index = index">
+                                            <td class="text-center">{{subject.num}}</td>
+                                            <td>{{subject.name}}</td>
+                                            <td class="text-center">{{subject.key}}</td>
+                                            <td class="text-center">{{subject.hours}}</td>
+                                            <td class="text-center">{{subject.periods}}</td>
+                                            <td class="td-actions text-center">
+                                                <button type="button" rel="tooltip" class="btn btn-success btn-link" (click)="onUpdateSubject(subject, index)">
+                                                  <i class="material-icons">edit</i>
+                                                </button>
+                                                <button type="button" rel="tooltip" class="btn btn-danger btn-link" (click)="onDeleteSubject(index)">
+                                                  <i class="material-icons">close</i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="card">
+                      <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">web</i>
+                        </div>
+                        <div class="bn-card-title-action">
+                            <h4 class="card-title">Talleres y Materias Cocurriculares</h4>
+                            <button class="btn btn-info" (click)="onAddCourse()">AGREGAR MATERIA</button>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                              <th class="text-center">Num</th>
+                                              <th>Nombre</th>
+                                              <th class="text-center">Clave</th>
+                                              <th class="text-center">Horas</th>
+                                              <th class="text-center">Periodos</th>
+                                              <th class="text-center">Acciones</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr *ngFor="let course of courses; let index = index">
+                                              <td class="text-center">{{course.num}}</td>
+                                              <td>{{course.name}}</td>
+                                              <td class="text-center">{{course.key}}</td>
+                                              <td class="text-center">{{course.hours}}</td>
+                                              <td class="text-center">{{course.periods}}</td>
+                                              <td class="text-center td-actions">
+                                                  <button type="button" rel="tooltip" class="btn btn-success btn-link" (click)="onUpdateCourse(course, index)">
+                                                    <i class="material-icons">edit</i>
+                                                  </button>
+                                                  <button type="button" rel="tooltip" class="btn btn-danger btn-link" (click)="onDeleteCourse(index)">
+                                                    <i class="material-icons">close</i>
+                                                  </button>
+                                              </td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
               </div>
               <div class="tab-pane" id="link3">
-                Semestre 3
+                  <div class="card">
+                      <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">web</i>
+                        </div>
+                        <div class="bn-card-title-action">
+                            <h4 class="card-title">Materias Curriculares</h4>
+                            <button class="btn btn-info" (click)="onAddSubject()">AGREGAR MATERIA</button>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                            <th class="text-center">Num</th>
+                                            <th>Nombre</th>
+                                            <th class="text-center">Clave</th>
+                                            <th class="text-center">Horas</th>
+                                            <th class="text-center">Periodos</th>
+                                            <th class="text-center">Acciones</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr *ngFor="let subject of subjects; let index = index">
+                                            <td class="text-center">{{subject.num}}</td>
+                                            <td>{{subject.name}}</td>
+                                            <td class="text-center">{{subject.key}}</td>
+                                            <td class="text-center">{{subject.hours}}</td>
+                                            <td class="text-center">{{subject.periods}}</td>
+                                            <td class="td-actions text-center">
+                                                <button type="button" rel="tooltip" class="btn btn-success btn-link" (click)="onUpdateSubject(subject, index)">
+                                                  <i class="material-icons">edit</i>
+                                                </button>
+                                                <button type="button" rel="tooltip" class="btn btn-danger btn-link" (click)="onDeleteSubject(index)">
+                                                  <i class="material-icons">close</i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="card">
+                      <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">web</i>
+                        </div>
+                        <div class="bn-card-title-action">
+                            <h4 class="card-title">Talleres y Materias Cocurriculares</h4>
+                            <button class="btn btn-info" (click)="onAddCourse()">AGREGAR MATERIA</button>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                              <th class="text-center">Num</th>
+                                              <th>Nombre</th>
+                                              <th class="text-center">Clave</th>
+                                              <th class="text-center">Horas</th>
+                                              <th class="text-center">Periodos</th>
+                                              <th class="text-center">Acciones</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr *ngFor="let course of courses; let index = index">
+                                              <td class="text-center">{{course.num}}</td>
+                                              <td>{{course.name}}</td>
+                                              <td class="text-center">{{course.key}}</td>
+                                              <td class="text-center">{{course.hours}}</td>
+                                              <td class="text-center">{{course.periods}}</td>
+                                              <td class="text-center td-actions">
+                                                  <button type="button" rel="tooltip" class="btn btn-success btn-link" (click)="onUpdateCourse(course, index)">
+                                                    <i class="material-icons">edit</i>
+                                                  </button>
+                                                  <button type="button" rel="tooltip" class="btn btn-danger btn-link" (click)="onDeleteCourse(index)">
+                                                    <i class="material-icons">close</i>
+                                                  </button>
+                                              </td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
               </div>
               <div class="tab-pane" id="link4">
-                Semestre 4
+                  <div class="card">
+                      <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">web</i>
+                        </div>
+                        <div class="bn-card-title-action">
+                            <h4 class="card-title">Materias Curriculares</h4>
+                            <button class="btn btn-info" (click)="onAddSubject()">AGREGAR MATERIA</button>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                            <th class="text-center">Num</th>
+                                            <th>Nombre</th>
+                                            <th class="text-center">Clave</th>
+                                            <th class="text-center">Horas</th>
+                                            <th class="text-center">Periodos</th>
+                                            <th class="text-center">Acciones</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr *ngFor="let subject of subjects; let index = index">
+                                            <td class="text-center">{{subject.num}}</td>
+                                            <td>{{subject.name}}</td>
+                                            <td class="text-center">{{subject.key}}</td>
+                                            <td class="text-center">{{subject.hours}}</td>
+                                            <td class="text-center">{{subject.periods}}</td>
+                                            <td class="td-actions text-center">
+                                                <button type="button" rel="tooltip" class="btn btn-success btn-link" (click)="onUpdateSubject(subject, index)">
+                                                  <i class="material-icons">edit</i>
+                                                </button>
+                                                <button type="button" rel="tooltip" class="btn btn-danger btn-link" (click)="onDeleteSubject(index)">
+                                                  <i class="material-icons">close</i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="card">
+                      <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">web</i>
+                        </div>
+                        <div class="bn-card-title-action">
+                            <h4 class="card-title">Talleres y Materias Cocurriculares</h4>
+                            <button class="btn btn-info" (click)="onAddCourse()">AGREGAR MATERIA</button>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                              <th class="text-center">Num</th>
+                                              <th>Nombre</th>
+                                              <th class="text-center">Clave</th>
+                                              <th class="text-center">Horas</th>
+                                              <th class="text-center">Periodos</th>
+                                              <th class="text-center">Acciones</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr *ngFor="let course of courses; let index = index">
+                                              <td class="text-center">{{course.num}}</td>
+                                              <td>{{course.name}}</td>
+                                              <td class="text-center">{{course.key}}</td>
+                                              <td class="text-center">{{course.hours}}</td>
+                                              <td class="text-center">{{course.periods}}</td>
+                                              <td class="text-center td-actions">
+                                                  <button type="button" rel="tooltip" class="btn btn-success btn-link" (click)="onUpdateCourse(course, index)">
+                                                    <i class="material-icons">edit</i>
+                                                  </button>
+                                                  <button type="button" rel="tooltip" class="btn btn-danger btn-link" (click)="onDeleteCourse(index)">
+                                                    <i class="material-icons">close</i>
+                                                  </button>
+                                              </td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
               </div>
               <div class="tab-pane" id="link5">
-                Semestre 5
+                  <div class="card">
+                      <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">web</i>
+                        </div>
+                        <div class="bn-card-title-action">
+                            <h4 class="card-title">Materias Curriculares</h4>
+                            <button class="btn btn-info" (click)="onAddSubject()">AGREGAR MATERIA</button>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                            <th class="text-center">Num</th>
+                                            <th>Nombre</th>
+                                            <th class="text-center">Clave</th>
+                                            <th class="text-center">Horas</th>
+                                            <th class="text-center">Periodos</th>
+                                            <th class="text-center">Acciones</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr *ngFor="let subject of subjects; let index = index">
+                                            <td class="text-center">{{subject.num}}</td>
+                                            <td>{{subject.name}}</td>
+                                            <td class="text-center">{{subject.key}}</td>
+                                            <td class="text-center">{{subject.hours}}</td>
+                                            <td class="text-center">{{subject.periods}}</td>
+                                            <td class="td-actions text-center">
+                                                <button type="button" rel="tooltip" class="btn btn-success btn-link" (click)="onUpdateSubject(subject, index)">
+                                                  <i class="material-icons">edit</i>
+                                                </button>
+                                                <button type="button" rel="tooltip" class="btn btn-danger btn-link" (click)="onDeleteSubject(index)">
+                                                  <i class="material-icons">close</i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="card">
+                      <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">web</i>
+                        </div>
+                        <div class="bn-card-title-action">
+                            <h4 class="card-title">Talleres y Materias Cocurriculares</h4>
+                            <button class="btn btn-info" (click)="onAddCourse()">AGREGAR MATERIA</button>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                              <th class="text-center">Num</th>
+                                              <th>Nombre</th>
+                                              <th class="text-center">Clave</th>
+                                              <th class="text-center">Horas</th>
+                                              <th class="text-center">Periodos</th>
+                                              <th class="text-center">Acciones</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr *ngFor="let course of courses; let index = index">
+                                              <td class="text-center">{{course.num}}</td>
+                                              <td>{{course.name}}</td>
+                                              <td class="text-center">{{course.key}}</td>
+                                              <td class="text-center">{{course.hours}}</td>
+                                              <td class="text-center">{{course.periods}}</td>
+                                              <td class="text-center td-actions">
+                                                  <button type="button" rel="tooltip" class="btn btn-success btn-link" (click)="onUpdateCourse(course, index)">
+                                                    <i class="material-icons">edit</i>
+                                                  </button>
+                                                  <button type="button" rel="tooltip" class="btn btn-danger btn-link" (click)="onDeleteCourse(index)">
+                                                    <i class="material-icons">close</i>
+                                                  </button>
+                                              </td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
               </div>
               <div class="tab-pane" id="link6">
-                Semestre 6
+                  <div class="card">
+                      <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">web</i>
+                        </div>
+                        <div class="bn-card-title-action">
+                            <h4 class="card-title">Materias Curriculares</h4>
+                            <button class="btn btn-info" (click)="onAddSubject()">AGREGAR MATERIA</button>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                            <th class="text-center">Num</th>
+                                            <th>Nombre</th>
+                                            <th class="text-center">Clave</th>
+                                            <th class="text-center">Horas</th>
+                                            <th class="text-center">Periodos</th>
+                                            <th class="text-center">Acciones</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr *ngFor="let subject of subjects; let index = index">
+                                            <td class="text-center">{{subject.num}}</td>
+                                            <td>{{subject.name}}</td>
+                                            <td class="text-center">{{subject.key}}</td>
+                                            <td class="text-center">{{subject.hours}}</td>
+                                            <td class="text-center">{{subject.periods}}</td>
+                                            <td class="td-actions text-center">
+                                                <button type="button" rel="tooltip" class="btn btn-success btn-link" (click)="onUpdateSubject(subject, index)">
+                                                  <i class="material-icons">edit</i>
+                                                </button>
+                                                <button type="button" rel="tooltip" class="btn btn-danger btn-link" (click)="onDeleteSubject(index)">
+                                                  <i class="material-icons">close</i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="card">
+                      <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">web</i>
+                        </div>
+                        <div class="bn-card-title-action">
+                            <h4 class="card-title">Talleres y Materias Cocurriculares</h4>
+                            <button class="btn btn-info" (click)="onAddCourse()">AGREGAR MATERIA</button>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                              <th class="text-center">Num</th>
+                                              <th>Nombre</th>
+                                              <th class="text-center">Clave</th>
+                                              <th class="text-center">Horas</th>
+                                              <th class="text-center">Periodos</th>
+                                              <th class="text-center">Acciones</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr *ngFor="let course of courses; let index = index">
+                                              <td class="text-center">{{course.num}}</td>
+                                              <td>{{course.name}}</td>
+                                              <td class="text-center">{{course.key}}</td>
+                                              <td class="text-center">{{course.hours}}</td>
+                                              <td class="text-center">{{course.periods}}</td>
+                                              <td class="text-center td-actions">
+                                                  <button type="button" rel="tooltip" class="btn btn-success btn-link" (click)="onUpdateCourse(course, index)">
+                                                    <i class="material-icons">edit</i>
+                                                  </button>
+                                                  <button type="button" rel="tooltip" class="btn btn-danger btn-link" (click)="onDeleteCourse(index)">
+                                                    <i class="material-icons">close</i>
+                                                  </button>
+                                              </td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
               </div>
               <div class="tab-pane" id="link7">
-                Semestre 7
+                  <div class="card">
+                      <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">web</i>
+                        </div>
+                        <div class="bn-card-title-action">
+                            <h4 class="card-title">Materias Curriculares</h4>
+                            <button class="btn btn-info" (click)="onAddSubject()">AGREGAR MATERIA</button>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                            <th class="text-center">Num</th>
+                                            <th>Nombre</th>
+                                            <th class="text-center">Clave</th>
+                                            <th class="text-center">Horas</th>
+                                            <th class="text-center">Periodos</th>
+                                            <th class="text-center">Acciones</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr *ngFor="let subject of subjects; let index = index">
+                                            <td class="text-center">{{subject.num}}</td>
+                                            <td>{{subject.name}}</td>
+                                            <td class="text-center">{{subject.key}}</td>
+                                            <td class="text-center">{{subject.hours}}</td>
+                                            <td class="text-center">{{subject.periods}}</td>
+                                            <td class="td-actions text-center">
+                                                <button type="button" rel="tooltip" class="btn btn-success btn-link" (click)="onUpdateSubject(subject, index)">
+                                                  <i class="material-icons">edit</i>
+                                                </button>
+                                                <button type="button" rel="tooltip" class="btn btn-danger btn-link" (click)="onDeleteSubject(index)">
+                                                  <i class="material-icons">close</i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="card">
+                      <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">web</i>
+                        </div>
+                        <div class="bn-card-title-action">
+                            <h4 class="card-title">Talleres y Materias Cocurriculares</h4>
+                            <button class="btn btn-info" (click)="onAddCourse()">AGREGAR MATERIA</button>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                              <th class="text-center">Num</th>
+                                              <th>Nombre</th>
+                                              <th class="text-center">Clave</th>
+                                              <th class="text-center">Horas</th>
+                                              <th class="text-center">Periodos</th>
+                                              <th class="text-center">Acciones</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr *ngFor="let course of courses; let index = index">
+                                              <td class="text-center">{{course.num}}</td>
+                                              <td>{{course.name}}</td>
+                                              <td class="text-center">{{course.key}}</td>
+                                              <td class="text-center">{{course.hours}}</td>
+                                              <td class="text-center">{{course.periods}}</td>
+                                              <td class="text-center td-actions">
+                                                  <button type="button" rel="tooltip" class="btn btn-success btn-link" (click)="onUpdateCourse(course, index)">
+                                                    <i class="material-icons">edit</i>
+                                                  </button>
+                                                  <button type="button" rel="tooltip" class="btn btn-danger btn-link" (click)="onDeleteCourse(index)">
+                                                    <i class="material-icons">close</i>
+                                                  </button>
+                                              </td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
               </div>
               <div class="tab-pane" id="link8">
-                Semestre 8
+                  <div class="card">
+                      <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">web</i>
+                        </div>
+                        <div class="bn-card-title-action">
+                            <h4 class="card-title">Materias Curriculares</h4>
+                            <button class="btn btn-info" (click)="onAddSubject()">AGREGAR MATERIA</button>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                            <th class="text-center">Num</th>
+                                            <th>Nombre</th>
+                                            <th class="text-center">Clave</th>
+                                            <th class="text-center">Horas</th>
+                                            <th class="text-center">Periodos</th>
+                                            <th class="text-center">Acciones</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr *ngFor="let subject of subjects; let index = index">
+                                            <td class="text-center">{{subject.num}}</td>
+                                            <td>{{subject.name}}</td>
+                                            <td class="text-center">{{subject.key}}</td>
+                                            <td class="text-center">{{subject.hours}}</td>
+                                            <td class="text-center">{{subject.periods}}</td>
+                                            <td class="td-actions text-center">
+                                                <button type="button" rel="tooltip" class="btn btn-success btn-link" (click)="onUpdateSubject(subject, index)">
+                                                  <i class="material-icons">edit</i>
+                                                </button>
+                                                <button type="button" rel="tooltip" class="btn btn-danger btn-link" (click)="onDeleteSubject(index)">
+                                                  <i class="material-icons">close</i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="card">
+                      <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">web</i>
+                        </div>
+                        <div class="bn-card-title-action">
+                            <h4 class="card-title">Talleres y Materias Cocurriculares</h4>
+                            <button class="btn btn-info" (click)="onAddCourse()">AGREGAR MATERIA</button>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                              <th class="text-center">Num</th>
+                                              <th>Nombre</th>
+                                              <th class="text-center">Clave</th>
+                                              <th class="text-center">Horas</th>
+                                              <th class="text-center">Periodos</th>
+                                              <th class="text-center">Acciones</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr *ngFor="let course of courses; let index = index">
+                                              <td class="text-center">{{course.num}}</td>
+                                              <td>{{course.name}}</td>
+                                              <td class="text-center">{{course.key}}</td>
+                                              <td class="text-center">{{course.hours}}</td>
+                                              <td class="text-center">{{course.periods}}</td>
+                                              <td class="text-center td-actions">
+                                                  <button type="button" rel="tooltip" class="btn btn-success btn-link" (click)="onUpdateCourse(course, index)">
+                                                    <i class="material-icons">edit</i>
+                                                  </button>
+                                                  <button type="button" rel="tooltip" class="btn btn-danger btn-link" (click)="onDeleteCourse(index)">
+                                                    <i class="material-icons">close</i>
+                                                  </button>
+                                              </td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
               </div>
             </div>
         </div>
