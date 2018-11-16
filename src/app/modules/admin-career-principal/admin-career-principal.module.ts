@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ChartsModule } from 'ng2-charts';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 /* Routing */
 import { appRoutes } from './admin-career-principal.routing';
@@ -18,12 +19,16 @@ import { AcpTeachersComponent } from './pages/acp-teachers/acp-teachers.componen
 import { AcpCurricularMapComponent } from './pages/acp-curricular-map/acp-curricular-map.component';
 import { AcpScheduleComponent } from './pages/acp-schedule/acp-schedule.component';
 import { AcpGroupsComponent } from './pages/acp-groups/acp-groups.component';
+import { AcpQualificationsComponent } from './pages/acp-qualifications/acp-qualifications.component';
+import { AcpQualificationsUploadPeriodComponent } from './pages/acp-qualifications-upload-period/acp-qualifications-upload-period.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forRoot(appRoutes),
-    ChartsModule
+    ChartsModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   declarations: [
     PagesComponent,
@@ -35,6 +40,8 @@ import { AcpGroupsComponent } from './pages/acp-groups/acp-groups.component';
     AcpCurricularMapComponent,
     AcpScheduleComponent,
     AcpGroupsComponent,
+    AcpQualificationsComponent,
+    AcpQualificationsUploadPeriodComponent,
   ]
 })
 export class AdminCareerPrincipalModule { }

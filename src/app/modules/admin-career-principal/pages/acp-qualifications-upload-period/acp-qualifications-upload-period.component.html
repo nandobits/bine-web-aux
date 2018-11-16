@@ -1,0 +1,87 @@
+<div class="card">
+    <div class="card-header">
+        <div class="bn-header">
+          <div class="bn-logo-sep">
+              <img src="assets/img/logo-sep.png" alt="">
+          </div>
+          <div class="bn-header-content">
+              <h4>BENEMÉRITO INSTITUTO NORMAL DEL ESTADO DE PUEBLA</h4>
+              <h4>"GRAL. JUAN CRISÓSTOMO BONILLA"</h4>
+              <h4>LICENCIATURA EN EDUCACIÓN FÍSICA</h4>
+              <h4>1º GRADO GRUPO A </h4>
+          </div>
+          <div class="bn-logo-bine">
+              <img src="assets/img/logo-bine.png" alt="">
+          </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="content">
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>Ciclo Escolar</th>
+                        <th>Semestre</th>
+                        <th>Grupo</th>
+                        <th>Periodo</th>
+                        <th>Curso</th>
+                        <th>Docente</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2018 - 2019</td>
+                        <td>1º</td>
+                        <td>A</td>
+                        <td>1º</td>
+                        <td class="bn-text-upper">Bases filosóficas, legales y organizativas del sistema educativo mexicano</td>
+                        <td>SABINO HERNANDEZ ESCALERA</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="content table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Num</th>
+                        <th>Alumno</th>
+                        <th class="bn-center">Faltas</th>
+                        <th class="bn-center">Calificación</th>
+                        <th class="bn-center">Letra</th>
+                        <th class="bn-center">Estatus</th>
+                        <th class="bn-center">% de asistencia</th>
+                        <th class="bn-center">Observaciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let student of studentsA; let count = index;">
+                        <td [ngClass]="{'text-danger': student.qualification && student.qualification < 6}">{{count+1}}</td>
+                        <td [ngClass]="{'text-danger': student.qualification && student.qualification < 6}">{{student.name}}</td>
+                        <td class="bn-center">
+                            <input *ngIf="student.status == 1" type="text" [(ngModel)]="student.absences" maxlength="2" class="bn-input-small text-center" [ngClass]="{'text-danger': student.qualification && student.qualification < 6}">
+                        </td>
+                        <td class="bn-center">
+                            <input *ngIf="student.status == 1" type="text" [(ngModel)]="student.qualification" maxlength="2" class="bn-input-small text-center" [ngClass]="{'text-danger': student.qualification && student.qualification < 6}">
+                        </td>
+                        <td class="bn-center" [ngClass]="{'text-danger': student.qualification && student.qualification < 6}">
+                            {{ qualificationsName[student.qualification] }}
+                        </td>
+                        <td class="bn-center" [ngClass]="{'text-danger': student.qualification && student.qualification < 6}">
+                            {{ qualificationsStatus[student.qualification] }}
+                        </td>
+                        <td class="bn-center">
+
+                        </td>
+                        <td class="bn-center bn-description">
+                            <input *ngIf="student.status == 1" type="text" [(ngModel)]="student.observations" maxlength="30">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row justify-content-center">
+            <button class="btn btn-info" (click)="onSaveQualifications()">GUARDAR CALIFICACIONES</button>
+        </div>
+    </div>
+</div>
