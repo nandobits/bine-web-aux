@@ -4,37 +4,162 @@
             <ul class="nav nav-pills nav-pills-warning" role="tablist">
               <li class="nav-item">
                 <a class="nav-link active" data-toggle="tab" href="#link1" role="tablist">
-                  Profile
+                  1º Semestre
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" data-toggle="tab" href="#link2" role="tablist">
-                  Settings
+                  2º Semestre
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" data-toggle="tab" href="#link3" role="tablist">
-                  Options
+                  3º Semestre
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#link4" role="tablist">
+                  4º Semestre
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#link5" role="tablist">
+                  5º Semestre
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#link6" role="tablist">
+                  6º Semestre
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#link7" role="tablist">
+                  7º Semestre
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#link8" role="tablist">
+                  8º Semestre
                 </a>
               </li>
             </ul>
             <div class="tab-content tab-space">
               <div class="tab-pane active" id="link1">
-                Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
-                <br />
-                <br /> Dramatically visualize customer directed convergence without revolutionary ROI. Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
-                <br/>
-                <br/> This is very nice.
+                  <div class="card">
+                      <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">web</i>
+                        </div>
+                        <div class="bn-card-title-action">
+                            <h4 class="card-title">Materias Curriculares</h4>
+                            <button class="btn btn-info" (click)="onAddSubject()">AGREGAR MATERIA</button>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                            <th class="text-center">Num</th>
+                                            <th>Nombre</th>
+                                            <th class="text-center">Clave</th>
+                                            <th class="text-center">Horas</th>
+                                            <th class="text-center">Periodos</th>
+                                            <th class="text-center">Acciones</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr *ngFor="let subject of subjects; let index = index">
+                                            <td class="text-center">{{subject.num}}</td>
+                                            <td>{{subject.name}}</td>
+                                            <td class="text-center">{{subject.key}}</td>
+                                            <td class="text-center">{{subject.hours}}</td>
+                                            <td class="text-center">{{subject.periods}}</td>
+                                            <td class="td-actions text-center">
+                                                <button type="button" rel="tooltip" class="btn btn-success btn-link" (click)="onUpdateSubject(subject, index)">
+                                                  <i class="material-icons">edit</i>
+                                                </button>
+                                                <button type="button" rel="tooltip" class="btn btn-danger btn-link" (click)="onDeleteSubject(index)">
+                                                  <i class="material-icons">close</i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="card">
+                      <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">web</i>
+                        </div>
+                        <div class="bn-card-title-action">
+                            <h4 class="card-title">Talleres y Materias Cocurriculares</h4>
+                            <button class="btn btn-info" (click)="onAddCourse()">AGREGAR MATERIA</button>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                              <th class="text-center">Num</th>
+                                              <th>Nombre</th>
+                                              <th class="text-center">Clave</th>
+                                              <th class="text-center">Horas</th>
+                                              <th class="text-center">Periodos</th>
+                                              <th class="text-center">Acciones</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr *ngFor="let course of courses; let index = index">
+                                              <td class="text-center">{{course.num}}</td>
+                                              <td>{{course.name}}</td>
+                                              <td class="text-center">{{course.key}}</td>
+                                              <td class="text-center">{{course.hours}}</td>
+                                              <td class="text-center">{{course.periods}}</td>
+                                              <td class="text-center td-actions">
+                                                  <button type="button" rel="tooltip" class="btn btn-success btn-link" (click)="onUpdateCourse(course, index)">
+                                                    <i class="material-icons">edit</i>
+                                                  </button>
+                                                  <button type="button" rel="tooltip" class="btn btn-danger btn-link" (click)="onDeleteCourse(index)">
+                                                    <i class="material-icons">close</i>
+                                                  </button>
+                                              </td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
               </div>
               <div class="tab-pane" id="link2">
-                Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.
-                <br />
-                <br />Dramatically maintain clicks-and-mortar solutions without functional solutions.
+                Semestre 2
               </div>
               <div class="tab-pane" id="link3">
-                Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas.
-                <br />
-                <br />Dynamically innovate resource-leveling customer service for state of the art customer service.
+                Semestre 3
+              </div>
+              <div class="tab-pane" id="link4">
+                Semestre 4
+              </div>
+              <div class="tab-pane" id="link5">
+                Semestre 5
+              </div>
+              <div class="tab-pane" id="link6">
+                Semestre 6
+              </div>
+              <div class="tab-pane" id="link7">
+                Semestre 7
+              </div>
+              <div class="tab-pane" id="link8">
+                Semestre 8
               </div>
             </div>
         </div>
