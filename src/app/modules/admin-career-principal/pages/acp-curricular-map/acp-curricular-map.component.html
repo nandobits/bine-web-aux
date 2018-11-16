@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-            <ul class="nav nav-pills nav-pills-warning" role="tablist">
+            <ul class="nav nav-pills nav-pills-danger" role="tablist">
               <li class="nav-item">
                 <a class="nav-link active" data-toggle="tab" href="#link1" role="tablist">
                   1º Semestre
@@ -76,7 +76,7 @@
                                             <td class="text-center">{{subject.key}}</td>
                                             <td class="text-center">{{subject.hours}}</td>
                                             <td class="text-center">{{subject.periods}}</td>
-                                            <td class="td-actions text-center">
+                                            <td class="td-actions justify-content-center">
                                                 <button type="button" rel="tooltip" class="btn btn-success btn-link" (click)="onUpdateSubject(subject, index)">
                                                   <i class="material-icons">edit</i>
                                                 </button>
@@ -123,7 +123,7 @@
                                               <td class="text-center">{{course.key}}</td>
                                               <td class="text-center">{{course.hours}}</td>
                                               <td class="text-center">{{course.periods}}</td>
-                                              <td class="text-center td-actions">
+                                              <td class="justify-content-center td-actions">
                                                   <button type="button" rel="tooltip" class="btn btn-success btn-link" (click)="onUpdateCourse(course, index)">
                                                     <i class="material-icons">edit</i>
                                                   </button>

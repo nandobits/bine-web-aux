@@ -17,7 +17,6 @@ import { AcpStudentsComponent } from './pages/acp-students/acp-students.componen
 import { AcpTeachersComponent } from './pages/acp-teachers/acp-teachers.component';
 import { AcpCurricularMapComponent } from './pages/acp-curricular-map/acp-curricular-map.component';
 import { AcpScheduleComponent } from './pages/acp-schedule/acp-schedule.component';
-import { AcpPopupScheduleComponent } from './components/acp-popup-schedule/acp-popup-schedule.component';
 import { AcpGroupsComponent } from './pages/acp-groups/acp-groups.component';
 
 @NgModule({
@@ -35,7 +34,6 @@ import { AcpGroupsComponent } from './pages/acp-groups/acp-groups.component';
     AcpTeachersComponent,
     AcpCurricularMapComponent,
     AcpScheduleComponent,
-    AcpPopupScheduleComponent,
     AcpGroupsComponent,
   ]
 })

@@ -6,6 +6,7 @@ import { AcpStudentsComponent } from './pages/acp-students/acp-students.componen
 import { AcpTeachersComponent } from './pages/acp-teachers/acp-teachers.component';
 import { AcpCurricularMapComponent } from './pages/acp-curricular-map/acp-curricular-map.component';
 import { AcpScheduleComponent } from './pages/acp-schedule/acp-schedule.component';
+import { AcpGroupsComponent } from './pages/acp-groups/acp-groups.component';
 
 export const appRoutes: Routes = [
     {
@@ -18,6 +19,7 @@ export const appRoutes: Routes = [
             { path: 'docentes', component: AcpTeachersComponent },
             { path: 'mapa-curricular', component: AcpCurricularMapComponent },
             { path: 'horarios', component: AcpScheduleComponent },
+            { path: 'grupos', component: AcpGroupsComponent },
         ]
     }
 ]
