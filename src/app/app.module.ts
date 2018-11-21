@@ -11,12 +11,14 @@ import { AppComponent } from './app.component';
 /* Pages */
 import { LandingComponent } from './pages/landing/landing.component';
 import { LoginComponent } from './pages/login/login.component';
+import { AcpCostsComponent } from './pages/acp-costs/acp-costs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
-    LoginComponent
+    LoginComponent,
+    AcpCostsComponent,
   ],
   imports: [
     BrowserModule,

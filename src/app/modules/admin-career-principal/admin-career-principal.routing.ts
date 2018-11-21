@@ -9,6 +9,7 @@ import { AcpScheduleComponent } from './pages/acp-schedule/acp-schedule.componen
 import { AcpGroupsComponent } from './pages/acp-groups/acp-groups.component';
 import { AcpQualificationsComponent } from './pages/acp-qualifications/acp-qualifications.component';
 import { AcpQualificationsUploadPeriodComponent } from './pages/acp-qualifications-upload-period/acp-qualifications-upload-period.component';
+import { AcpDocumentsComponent } from './pages/acp-documents/acp-documents.component';
 
 export const appRoutes: Routes = [
     {
@@ -24,6 +25,7 @@ export const appRoutes: Routes = [
             { path: 'grupos', component: AcpGroupsComponent },
             { path: 'calificaciones', component: AcpQualificationsComponent },
             { path: 'calificaciones-cargar', component: AcpQualificationsUploadPeriodComponent },
+            { path: 'documentos', component: AcpDocumentsComponent },
         ]
     }
 ]
