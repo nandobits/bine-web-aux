@@ -106,7 +106,8 @@
                           [data]="doughnutChartDataStudent"
                           [labels]="doughnutChartLabelsStudent"
                           [colors]="doughnutChartColorsStudent"
-                          [chartType]="doughnutChartType"></canvas>
+                          [chartType]="doughnutChartType"
+                          (chartClick)="doughnutChartStudentClicked($event)"></canvas>
                 </div>
                 <div class="card-footer">
                     <div class="stats">
@@ -403,6 +404,658 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <h3>Fechas para captura de calificaciones</h3>
+    <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-tabs card-header-danger">
+              <div class="nav-tabs-navigation">
+                <div class="nav-tabs-wrapper">
+                  <span class="nav-tabs-title">Materias con:</span>
+                  <ul class="nav nav-tabs" data-tabs="tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#period_2" data-toggle="tab">
+                        <i class="material-icons">code</i> 2 Periodos
+                        <div class="ripple-container"></div>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#period_3" data-toggle="tab">
+                        <i class="material-icons">code</i> 3 Periodos
+                        <div class="ripple-container"></div>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#period_4" data-toggle="tab">
+                        <i class="material-icons">code</i> 4 Periodos
+                        <div class="ripple-container"></div>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#period_5" data-toggle="tab">
+                        <i class="material-icons">code</i> 5 Periodos
+                        <div class="ripple-container"></div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="tab-content">
+                <div class="tab-pane active" id="period_2">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <ul class="nav nav-pills nav-pills-warning flex-column" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#link1" role="tablist">
+                              1º Momento
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#link2" role="tablist">
+                              2º Momento
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-md-9">
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="link1">
+                            <h4 class="bn-text-500">1º Momento de materias con 2 períodos</h4>
+                            <h4>Fecha de apertura</h4>
+                            <div class="row">
+                                <div class="col-md-5">
+                                  <div class="card ">
+                                    <div class="card-header card-header-info card-header-text">
+                                      <div class="card-icon">
+                                        <i class="material-icons">today</i>
+                                      </div>
+                                      <h4 class="card-title">Día</h4>
+                                    </div>
+                                    <div class="card-body ">
+                                      <div class="form-group">
+                                        <input type="text" class="form-control datepicker" value="11/26/2018">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-5">
+                                  <div class="card ">
+                                    <div class="card-header card-header-info card-header-text">
+                                      <div class="card-icon">
+                                        <i class="material-icons">av_timer</i>
+                                      </div>
+                                      <h4 class="card-title">Hora</h4>
+                                    </div>
+                                    <div class="card-body ">
+                                      <div class="form-group">
+                                        <input type="text" class="form-control timepicker" value="11/26/2018">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <h4>Fecha de cierre</h4>
+                            <div class="row">
+                                <div class="col-md-5">
+                                  <div class="card ">
+                                    <div class="card-header card-header-info card-header-text">
+                                      <div class="card-icon">
+                                        <i class="material-icons">today</i>
+                                      </div>
+                                      <h4 class="card-title">Día</h4>
+                                    </div>
+                                    <div class="card-body ">
+                                      <div class="form-group">
+                                        <input type="text" class="form-control datepicker" value="11/26/2018">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-5">
+                                  <div class="card ">
+                                    <div class="card-header card-header-info card-header-text">
+                                      <div class="card-icon">
+                                        <i class="material-icons">av_timer</i>
+                                      </div>
+                                      <h4 class="card-title">Hora</h4>
+                                    </div>
+                                    <div class="card-body ">
+                                      <div class="form-group">
+                                        <input type="text" class="form-control timepicker" value="11/26/2018">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="link2">
+                              <h4 class="bn-text-500">2º Momento de materias con 2 períodos</h4>
+                              <h4>Fecha de apertura</h4>
+                              <div class="row">
+                                  <div class="col-md-5">
+                                    <div class="card ">
+                                      <div class="card-header card-header-info card-header-text">
+                                        <div class="card-icon">
+                                          <i class="material-icons">today</i>
+                                        </div>
+                                        <h4 class="card-title">Día</h4>
+                                      </div>
+                                      <div class="card-body ">
+                                        <div class="form-group">
+                                          <input type="text" class="form-control datepicker" value="11/26/2018">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-5">
+                                    <div class="card ">
+                                      <div class="card-header card-header-info card-header-text">
+                                        <div class="card-icon">
+                                          <i class="material-icons">av_timer</i>
+                                        </div>
+                                        <h4 class="card-title">Hora</h4>
+                                      </div>
+                                      <div class="card-body ">
+                                        <div class="form-group">
+                                          <input type="text" class="form-control timepicker" value="11/26/2018">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                              </div>
+                              <h4>Fecha de cierre</h4>
+                              <div class="row">
+                                  <div class="col-md-5">
+                                    <div class="card ">
+                                      <div class="card-header card-header-info card-header-text">
+                                        <div class="card-icon">
+                                          <i class="material-icons">today</i>
+                                        </div>
+                                        <h4 class="card-title">Día</h4>
+                                      </div>
+                                      <div class="card-body ">
+                                        <div class="form-group">
+                                          <input type="text" class="form-control datepicker" value="11/26/2018">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-5">
+                                    <div class="card ">
+                                      <div class="card-header card-header-info card-header-text">
+                                        <div class="card-icon">
+                                          <i class="material-icons">av_timer</i>
+                                        </div>
+                                        <h4 class="card-title">Hora</h4>
+                                      </div>
+                                      <div class="card-body ">
+                                        <div class="form-group">
+                                          <input type="text" class="form-control timepicker" value="11/26/2018">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="period_3">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <ul class="nav nav-pills nav-pills-warning flex-column" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#link3" role="tablist">
+                              1º Momento
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#link4" role="tablist">
+                              2º Momento
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#link5" role="tablist">
+                              3º Momento
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-md-9">
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="link3">
+                            <h4 class="bn-text-500">1º Momento de materias con 3 períodos</h4>
+                            <h4>Fecha de apertura</h4>
+                            <div class="row">
+                                <div class="col-md-5">
+                                  <div class="card ">
+                                    <div class="card-header card-header-info card-header-text">
+                                      <div class="card-icon">
+                                        <i class="material-icons">today</i>
+                                      </div>
+                                      <h4 class="card-title">Día</h4>
+                                    </div>
+                                    <div class="card-body ">
+                                      <div class="form-group">
+                                        <input type="text" class="form-control datepicker" value="11/26/2018">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-5">
+                                  <div class="card ">
+                                    <div class="card-header card-header-info card-header-text">
+                                      <div class="card-icon">
+                                        <i class="material-icons">av_timer</i>
+                                      </div>
+                                      <h4 class="card-title">Hora</h4>
+                                    </div>
+                                    <div class="card-body ">
+                                      <div class="form-group">
+                                        <input type="text" class="form-control timepicker" value="11/26/2018">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <h4>Fecha de cierre</h4>
+                            <div class="row">
+                                <div class="col-md-5">
+                                  <div class="card ">
+                                    <div class="card-header card-header-info card-header-text">
+                                      <div class="card-icon">
+                                        <i class="material-icons">today</i>
+                                      </div>
+                                      <h4 class="card-title">Día</h4>
+                                    </div>
+                                    <div class="card-body ">
+                                      <div class="form-group">
+                                        <input type="text" class="form-control datepicker" value="11/26/2018">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-5">
+                                  <div class="card ">
+                                    <div class="card-header card-header-info card-header-text">
+                                      <div class="card-icon">
+                                        <i class="material-icons">av_timer</i>
+                                      </div>
+                                      <h4 class="card-title">Hora</h4>
+                                    </div>
+                                    <div class="card-body ">
+                                      <div class="form-group">
+                                        <input type="text" class="form-control timepicker" value="11/26/2018">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="link4">
+                              <h4 class="bn-text-500">2º Momento de materias con 3 períodos</h4>
+                              <h4>Fecha de apertura</h4>
+                              <div class="row">
+                                  <div class="col-md-5">
+                                    <div class="card ">
+                                      <div class="card-header card-header-info card-header-text">
+                                        <div class="card-icon">
+                                          <i class="material-icons">today</i>
+                                        </div>
+                                        <h4 class="card-title">Día</h4>
+                                      </div>
+                                      <div class="card-body ">
+                                        <div class="form-group">
+                                          <input type="text" class="form-control datepicker" value="11/26/2018">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-5">
+                                    <div class="card ">
+                                      <div class="card-header card-header-info card-header-text">
+                                        <div class="card-icon">
+                                          <i class="material-icons">av_timer</i>
+                                        </div>
+                                        <h4 class="card-title">Hora</h4>
+                                      </div>
+                                      <div class="card-body ">
+                                        <div class="form-group">
+                                          <input type="text" class="form-control timepicker" value="11/26/2018">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                              </div>
+                              <h4>Fecha de cierre</h4>
+                              <div class="row">
+                                  <div class="col-md-5">
+                                    <div class="card ">
+                                      <div class="card-header card-header-info card-header-text">
+                                        <div class="card-icon">
+                                          <i class="material-icons">today</i>
+                                        </div>
+                                        <h4 class="card-title">Día</h4>
+                                      </div>
+                                      <div class="card-body ">
+                                        <div class="form-group">
+                                          <input type="text" class="form-control datepicker" value="11/26/2018">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-5">
+                                    <div class="card ">
+                                      <div class="card-header card-header-info card-header-text">
+                                        <div class="card-icon">
+                                          <i class="material-icons">av_timer</i>
+                                        </div>
+                                        <h4 class="card-title">Hora</h4>
+                                      </div>
+                                      <div class="card-body ">
+                                        <div class="form-group">
+                                          <input type="text" class="form-control timepicker" value="11/26/2018">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="tab-pane" id="link5">
+                              <h4 class="bn-text-500">3º Momento de materias con 3 períodos</h4>
+                              <h4>Fecha de apertura</h4>
+                              <div class="row">
+                                  <div class="col-md-5">
+                                    <div class="card ">
+                                      <div class="card-header card-header-info card-header-text">
+                                        <div class="card-icon">
+                                          <i class="material-icons">today</i>
+                                        </div>
+                                        <h4 class="card-title">Día</h4>
+                                      </div>
+                                      <div class="card-body ">
+                                        <div class="form-group">
+                                          <input type="text" class="form-control datepicker" value="11/26/2018">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-5">
+                                    <div class="card ">
+                                      <div class="card-header card-header-info card-header-text">
+                                        <div class="card-icon">
+                                          <i class="material-icons">av_timer</i>
+                                        </div>
+                                        <h4 class="card-title">Hora</h4>
+                                      </div>
+                                      <div class="card-body ">
+                                        <div class="form-group">
+                                          <input type="text" class="form-control timepicker" value="11/26/2018">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                              </div>
+                              <h4>Fecha de cierre</h4>
+                              <div class="row">
+                                  <div class="col-md-5">
+                                    <div class="card ">
+                                      <div class="card-header card-header-info card-header-text">
+                                        <div class="card-icon">
+                                          <i class="material-icons">today</i>
+                                        </div>
+                                        <h4 class="card-title">Día</h4>
+                                      </div>
+                                      <div class="card-body ">
+                                        <div class="form-group">
+                                          <input type="text" class="form-control datepicker" value="11/26/2018">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-5">
+                                    <div class="card ">
+                                      <div class="card-header card-header-info card-header-text">
+                                        <div class="card-icon">
+                                          <i class="material-icons">av_timer</i>
+                                        </div>
+                                        <h4 class="card-title">Hora</h4>
+                                      </div>
+                                      <div class="card-body ">
+                                        <div class="form-group">
+                                          <input type="text" class="form-control timepicker" value="11/26/2018">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="period_4">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <ul class="nav nav-pills nav-pills-warning flex-column" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#link6" role="tablist">
+                              1º Momento
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#link7" role="tablist">
+                              2º Momento
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#link8" role="tablist">
+                              3º Momento
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#link9" role="tablist">
+                              4º Momento
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-md-9">
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="link6">
+                            <h4 class="bn-text-500">1º Momento de materias con 4 períodos</h4>
+                            <h4>Fecha de apertura</h4>
+                            <div class="row">
+                                <div class="col-md-5">
+                                  <div class="card ">
+                                    <div class="card-header card-header-info card-header-text">
+                                      <div class="card-icon">
+                                        <i class="material-icons">today</i>
+                                      </div>
+                                      <h4 class="card-title">Día</h4>
+                                    </div>
+                                    <div class="card-body ">
+                                      <div class="form-group">
+                                        <input type="text" class="form-control datepicker" value="11/26/2018">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-5">
+                                  <div class="card ">
+                                    <div class="card-header card-header-info card-header-text">
+                                      <div class="card-icon">
+                                        <i class="material-icons">av_timer</i>
+                                      </div>
+                                      <h4 class="card-title">Hora</h4>
+                                    </div>
+                                    <div class="card-body ">
+                                      <div class="form-group">
+                                        <input type="text" class="form-control timepicker" value="11/26/2018">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <h4>Fecha de cierre</h4>
+                            <div class="row">
+                                <div class="col-md-5">
+                                  <div class="card ">
+                                    <div class="card-header card-header-info card-header-text">
+                                      <div class="card-icon">
+                                        <i class="material-icons">today</i>
+                                      </div>
+                                      <h4 class="card-title">Día</h4>
+                                    </div>
+                                    <div class="card-body ">
+                                      <div class="form-group">
+                                        <input type="text" class="form-control datepicker" value="11/26/2018">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-5">
+                                  <div class="card ">
+                                    <div class="card-header card-header-info card-header-text">
+                                      <div class="card-icon">
+                                        <i class="material-icons">av_timer</i>
+                                      </div>
+                                      <h4 class="card-title">Hora</h4>
+                                    </div>
+                                    <div class="card-body ">
+                                      <div class="form-group">
+                                        <input type="text" class="form-control timepicker" value="11/26/2018">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="link7"></div>
+                          <div class="tab-pane" id="link6"></div>
+                          <div class="tab-pane" id="link9"></div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="period_5">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <ul class="nav nav-pills nav-pills-warning flex-column" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#link10" role="tablist">
+                              1º Momento
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#link11" role="tablist">
+                              2º Momento
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#link12" role="tablist">
+                              3º Momento
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#link13" role="tablist">
+                              4º Momento
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#link14" role="tablist">
+                              5º Momento
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-md-9">
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="link10">
+                            <h4 class="bn-text-500">1º Momento de materias con 5 períodos</h4>
+                            <h4>Fecha de apertura</h4>
+                            <div class="row">
+                                <div class="col-md-5">
+                                  <div class="card ">
+                                    <div class="card-header card-header-info card-header-text">
+                                      <div class="card-icon">
+                                        <i class="material-icons">today</i>
+                                      </div>
+                                      <h4 class="card-title">Día</h4>
+                                    </div>
+                                    <div class="card-body ">
+                                      <div class="form-group">
+                                        <input type="text" class="form-control datepicker" value="11/26/2018">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-5">
+                                  <div class="card ">
+                                    <div class="card-header card-header-info card-header-text">
+                                      <div class="card-icon">
+                                        <i class="material-icons">av_timer</i>
+                                      </div>
+                                      <h4 class="card-title">Hora</h4>
+                                    </div>
+                                    <div class="card-body ">
+                                      <div class="form-group">
+                                        <input type="text" class="form-control timepicker" value="11/26/2018">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <h4>Fecha de cierre</h4>
+                            <div class="row">
+                                <div class="col-md-5">
+                                  <div class="card ">
+                                    <div class="card-header card-header-info card-header-text">
+                                      <div class="card-icon">
+                                        <i class="material-icons">today</i>
+                                      </div>
+                                      <h4 class="card-title">Día</h4>
+                                    </div>
+                                    <div class="card-body ">
+                                      <div class="form-group">
+                                        <input type="text" class="form-control datepicker" value="11/26/2018">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-5">
+                                  <div class="card ">
+                                    <div class="card-header card-header-info card-header-text">
+                                      <div class="card-icon">
+                                        <i class="material-icons">av_timer</i>
+                                      </div>
+                                      <h4 class="card-title">Hora</h4>
+                                    </div>
+                                    <div class="card-body ">
+                                      <div class="form-group">
+                                        <input type="text" class="form-control timepicker" value="11/26/2018">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="link11"></div>
+                          <div class="tab-pane" id="link12"></div>
+                          <div class="tab-pane" id="link13"></div>
+                          <div class="tab-pane" id="link14"></div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
     </div>
 </div>

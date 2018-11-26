@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+declare function initDatePickers(): any;
 
 @Component({
   selector: 'bn-acp-dashboard',
@@ -18,8 +20,13 @@ export class AcpDashboardComponent implements OnInit {
     public doughnutChartColors: any[] = [{ backgroundColor: ["#72B9F2", "#FF8BA6"] }];
     public doughnutChartType:string = 'doughnut';
 
-    constructor() { }
+    constructor(private router: Router) { }
 
     ngOnInit() {
+        initDatePickers();
+    }
+
+    public doughnutChartStudentClicked(event){
+        this.router.navigate(['/admin-lic-principal/panel-de-control/estadisticas/estudiantes/baja-temporal'])
     }
 }

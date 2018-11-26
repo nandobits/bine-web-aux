@@ -10,6 +10,7 @@ import { AcpGroupsComponent } from './pages/acp-groups/acp-groups.component';
 import { AcpQualificationsComponent } from './pages/acp-qualifications/acp-qualifications.component';
 import { AcpQualificationsUploadPeriodComponent } from './pages/acp-qualifications-upload-period/acp-qualifications-upload-period.component';
 import { AcpDocumentsComponent } from './pages/acp-documents/acp-documents.component';
+import { AcpUserStatisticsComponent } from './pages/acp-dashboard/acp-user-statistics/acp-user-statistics.component';
 
 export const appRoutes: Routes = [
     {
@@ -18,6 +19,7 @@ export const appRoutes: Routes = [
         children: [
             { path: '', redirectTo: 'panel-de-control', pathMatch: 'full' },
             { path: 'panel-de-control', component: AcpDashboardComponent },
+            { path: 'panel-de-control/estadisticas/estudiantes/baja-temporal', component: AcpUserStatisticsComponent },
             { path: 'estudiantes', component: AcpStudentsComponent },
             { path: 'docentes', component: AcpTeachersComponent },
             { path: 'mapa-curricular', component: AcpCurricularMapComponent },

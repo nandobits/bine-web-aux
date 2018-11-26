@@ -28,6 +28,14 @@ function initScrollBar(){
   }
 };
 
+function initDatePickers(){
+    // initialise Datetimepicker and Sliders
+    md.initFormExtendedDatetimepickers();
+    if ($('.slider').length != 0) {
+      md.initSliders();
+    }
+}
+
 
 var breakCards = true;
 
@@ -200,6 +208,8 @@ function initTable(){
       alert('You clicked on Like button');
     });
 }
+
+
 
 $(document).on('click', '.navbar-toggler', function() {
   $toggle = $(this);

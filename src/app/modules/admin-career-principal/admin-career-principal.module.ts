@@ -22,6 +22,7 @@ import { AcpGroupsComponent } from './pages/acp-groups/acp-groups.component';
 import { AcpQualificationsComponent } from './pages/acp-qualifications/acp-qualifications.component';
 import { AcpQualificationsUploadPeriodComponent } from './pages/acp-qualifications-upload-period/acp-qualifications-upload-period.component';
 import { AcpDocumentsComponent } from './pages/acp-documents/acp-documents.component';
+import { AcpUserStatisticsComponent } from './pages/acp-dashboard/acp-user-statistics/acp-user-statistics.component';
 
 @NgModule({
   imports: [
@@ -44,6 +45,7 @@ import { AcpDocumentsComponent } from './pages/acp-documents/acp-documents.compo
     AcpQualificationsComponent,
     AcpQualificationsUploadPeriodComponent,
     AcpDocumentsComponent,
+    AcpUserStatisticsComponent,
   ]
 })
 export class AdminCareerPrincipalModule { }
