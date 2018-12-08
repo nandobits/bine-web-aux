@@ -23,6 +23,7 @@ import { AcpQualificationsComponent } from './pages/acp-qualifications/acp-quali
 import { AcpQualificationsUploadPeriodComponent } from './pages/acp-qualifications-upload-period/acp-qualifications-upload-period.component';
 import { AcpDocumentsComponent } from './pages/acp-documents/acp-documents.component';
 import { AcpUserStatisticsComponent } from './pages/acp-dashboard/acp-user-statistics/acp-user-statistics.component';
+import { AcpOutstandingStudentsComponent } from './pages/acp-outstanding-students/acp-outstanding-students.component';
 
 @NgModule({
   imports: [
@@ -46,6 +47,7 @@ import { AcpUserStatisticsComponent } from './pages/acp-dashboard/acp-user-stati
     AcpQualificationsUploadPeriodComponent,
     AcpDocumentsComponent,
     AcpUserStatisticsComponent,
+    AcpOutstandingStudentsComponent,
   ]
 })
 export class AdminCareerPrincipalModule { }
